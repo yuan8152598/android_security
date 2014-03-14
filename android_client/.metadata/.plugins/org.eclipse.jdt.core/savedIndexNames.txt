@@ -1,4 +1,0 @@
-INDEX VERSION 1.126+/home/chao/android_security/android_client/.metadata/.plugins/org.eclipse.jdt.core
-3468705847.index
-3508791755.index
-4052580255.index
