@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AndroidSecurity</string>
+    <string name="action_settings">Settings</string>
+    <string name="Welcome">Welcome to android security application!</string>
+    <string name="Send">Send</string>
+    <string name="Cancel">Cancel</string>
+
+</resources>
