@@ -11,33 +11,33 @@ import android.os.Message;
 public class ClientThread implements Runnable
 {
 
-	private Socket s;
-	private Handler handler;
-	BufferedReader br = null;
-	public ClientThread(Socket s , Handler handler)
-		throws IOException
-	{
-		this.s = s;
-		this.handler = handler;
-		br = new BufferedReader(
-			new InputStreamReader(s.getInputStream()));
-	}
-	public void run()
-	{
-		try
-		{
-			String content = null;
-			while ((content = br.readLine()) != null)
-			{
-				Message msg = new Message();
-				msg.what = 0x123;
-				msg.obj = content;
-				handler.sendMessage(msg);
-			}
-		}
-		catch (Exception e)
-		{
-			e.printStackTrace();
-		}
-	}
+    private Socket s;
+    private Handler handler;
+    BufferedReader br = null;
+    public ClientThread(Socket s , Handler handler)
+        throws IOException
+    {
+        this.s = s;
+        this.handler = handler;
+        br = new BufferedReader(
+            new InputStreamReader(s.getInputStream()));
+    }
+    public void run()
+    {
+        try
+        {
+            String content = null;
+            while ((content = br.readLine()) != null)
+            {
+                Message msg = new Message();
+                msg.what = 0x123;
+                msg.obj = content;
+                handler.sendMessage(msg);
+            }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
 }
